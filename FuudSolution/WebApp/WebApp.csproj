@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <UserSecretsId>aspnet-WebApp-6E6FEDA0-E90A-4B62-8F1A-F5EE2C2324A1</UserSecretsId>
+        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.7.3" />
+        <PackageReference Include="Hangfire.Core" Version="1.7.3" />
+        <PackageReference Include="Hangfire.MySqlStorage" Version="2.0.0" />
+        <PackageReference Include="me.raimondlu.Contracts.DockerHelper" Version="1.0.0" />
+        <PackageReference Include="me.raimondlu.DockerHelper" Version="1.0.0" />
+        <PackageReference Include="me.raimondlu.Identity" Version="1.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="3.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.2" />
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BLL.App\BLL.App.csproj" />
+      <ProjectReference Include="..\DAL.App.EF\DAL.App.EF.csproj" />
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\PublicApi.v1.DTO\PublicApi.v1.DTO.csproj" />
+      <ProjectReference Include="..\PublicApi.v1\PublicApi.v1.csproj" />
+      <ProjectReference Include="..\WebCrawler\WebCrawler.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Comment\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Comment\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Comment\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Comment\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Comment\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemDepletedReport\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemDepletedReport\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemDepletedReport\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemDepletedReport\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemDepletedReport\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FuudUser\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FuudUser\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FuudUser\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FuudUser\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FuudUser\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Rating\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Rating\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Rating\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Rating\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Rating\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserFavouriteProvider\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserFavouriteProvider\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserFavouriteProvider\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserFavouriteProvider\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserFavouriteProvider\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="PDFs" />
+    </ItemGroup>
+
+</Project>

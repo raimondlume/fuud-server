@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Contracts.BLL.App\Contracts.BLL.App.csproj" />
+      <ProjectReference Include="..\Contracts.WebCrawler.App\Contracts.WebCrawler.App.csproj" />
+      <ProjectReference Include="..\Contracts.WebCrawler.Base\Contracts.WebCrawler.Base.csproj" />
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Apis.Sheets.v4" Version="1.40.0.1594" />
+      <PackageReference Include="iTextSharp" Version="5.5.13" />
+    </ItemGroup>
+
+</Project>
