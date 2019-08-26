@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
@@ -69,7 +70,7 @@ namespace WebApp.APIControllers.Identity
                 // get the Json Web Token
                 var jwt = JwtHelper.GenerateJwt(
                     claimsPrincipal.Claims,
-                    _configuration["JWT:Key"],
+                    Environment.GetEnvironmentVariable("JWT_ENCRYPTION_KEY"),
                     _configuration["JWT:Issuer"],
                     int.Parse(_configuration["JWT:ExpireDays"]));
                 _logger.LogInformation("Token generated for user");
@@ -103,7 +104,7 @@ namespace WebApp.APIControllers.Identity
                     // get the Json Web Token
                     var jwt = JwtHelper.GenerateJwt(
                         claimsPrincipal.Claims,
-                        _configuration["JWT:Key"],
+                        Environment.GetEnvironmentVariable("JWT_ENCRYPTION_KEY"),
                         _configuration["JWT:Issuer"],
                         int.Parse(_configuration["JWT:ExpireDays"]));
                     _logger.LogInformation("Token generated for user");

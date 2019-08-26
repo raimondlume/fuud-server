@@ -38,7 +38,7 @@ namespace WebCrawler
 
         private static readonly List<string> EstonianDays = new List<string>
             {"Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede"};
-        
+
         private static readonly List<string> SoupStrings = new List<string>
             {"supp", "seljanka", "rassolnik", "borš"};
 
@@ -52,10 +52,10 @@ namespace WebCrawler
             _bll.FoodItems.ArchiveAllActiveFoodItemsFromProvider(ITMajaProviderId);
             _bll.FoodItems.ArchiveAllActiveFoodItemsFromProvider(KuuesKorpusProviderId);
 
-            var ITmajaParsed = await ParsePDF(DailyITMajaURL, $"{FilePath}/itmaja.pdf");
+            var ITmajaParsed = await ParsePDF(DailyITMajaURL, "itmaja.pdf");
             await MapStringToFoodItems(ITmajaParsed, ITMajaProviderId);
 
-            var KuuesKorpusParsed = await ParsePDF(DailyKuuesKorpusURL, $"{FilePath}/kuueskorpus.pdf");
+            var KuuesKorpusParsed = await ParsePDF(DailyKuuesKorpusURL, "kuueskorpus.pdf");
             await MapStringToFoodItems(KuuesKorpusParsed, KuuesKorpusProviderId);
         }
 
@@ -107,7 +107,7 @@ namespace WebCrawler
                         var estonianWord = "";
                         foreach (var word in nameEng.Split())
                         {
-                            if (EstonianDays.Any(s => word.Contains(s))) 
+                            if (EstonianDays.Any(s => word.Contains(s)))
                                 estonianWord = EstonianDays.Find(s => word.Contains(s));
                         }
 
