@@ -7,8 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Hangfire.AspNetCore" Version="1.7.3" />
-        <PackageReference Include="Hangfire.Core" Version="1.7.3" />
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.7.6" />
+        <PackageReference Include="Hangfire.Core" Version="1.7.6" />
+        <PackageReference Include="Hangfire.Dashboard.Basic.Authentication" Version="1.1.0" />
         <PackageReference Include="Hangfire.MySqlStorage" Version="2.0.0" />
         <PackageReference Include="me.raimondlu.Contracts.DockerHelper" Version="1.0.0" />
         <PackageReference Include="me.raimondlu.DockerHelper" Version="1.0.0" />
@@ -57,6 +58,36 @@
       <_ContentIncludedByDefault Remove="Views\UserFavouriteProvider\Details.cshtml" />
       <_ContentIncludedByDefault Remove="Views\UserFavouriteProvider\Edit.cshtml" />
       <_ContentIncludedByDefault Remove="Views\UserFavouriteProvider\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodCategory\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodCategory\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodCategory\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodCategory\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodCategory\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItem\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItem\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItem\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItem\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItem\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemTag\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemTag\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemTag\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemTag\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodItemTag\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodTag\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodTag\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodTag\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodTag\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodTag\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Price\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Price\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Price\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Price\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Price\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Provider\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Provider\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Provider\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Provider\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Provider\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>

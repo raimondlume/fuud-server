@@ -22,8 +22,10 @@ using DAL.App.EF.Repositories;
 using me.raimondlu.DAL.Base.EF.Helpers;
 using Domain.Identity;
 using Hangfire;
+using Hangfire.Dashboard;
 using Hangfire.MySql;
 using Hangfire.Storage;
+using HangfireBasicAuthenticationFilter;
 using me.raimondlu.DockerHelper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -70,10 +72,6 @@ namespace WebApp
             services.AddDbContext<AppDbContext>(options =>
                 // UseMySQL is oracle non-functional driver
                 options.UseMySql(Environment.GetEnvironmentVariable("MYSQL_CONNECTION_STRING")));
-
-            /*services.AddDefaultIdentity<AppUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<AppDbContext>();*/
 
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
@@ -195,8 +193,18 @@ namespace WebApp
             });
 
             app.UseAuthentication();
-
-            app.UseHangfireDashboard();
+            
+            app.UseHangfireDashboard("/jobs", new DashboardOptions()
+            {
+                Authorization = new []
+                {
+                    new HangfireCustomBasicAuthenticationFilter
+                    {
+                        User = Environment.GetEnvironmentVariable("HANGFIRE_USER"), 
+                        Pass = Environment.GetEnvironmentVariable("HANGFIRE_PASSWORD")
+                    } 
+                }
+            });
 
             // clear all recurring jobs before updating
             using (var connection = JobStorage.Current.GetConnection())
