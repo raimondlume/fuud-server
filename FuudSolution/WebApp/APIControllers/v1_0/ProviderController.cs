@@ -42,7 +42,7 @@ namespace WebApp.APIControllers.v1_0
             return ProviderMapper.MapFromBLL(provider);
         }
 
-        // PUT: api/Provider/5
+        /*// PUT: api/Provider/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProvider(int id, PublicApi.v1.DTO.Provider provider)
         {
@@ -90,6 +90,6 @@ namespace WebApp.APIControllers.v1_0
             await _bll.SaveChangesAsync();
 
             return ProviderMapper.MapFromBLL(provider);
-        }
+        }*/
     }
 }

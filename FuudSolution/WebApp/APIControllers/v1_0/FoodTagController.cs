@@ -44,7 +44,7 @@ namespace WebApp.APIControllers.v1_0
             return FoodTagMapper.MapFromBLL(foodTag);
         }
 
-        // PUT: api/FoodTag/5
+        /*// PUT: api/FoodTag/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFoodTag(int id, FoodTag foodTag)
         {
@@ -91,6 +91,6 @@ namespace WebApp.APIControllers.v1_0
             await _bll.SaveChangesAsync();
 
             return FoodTagMapper.MapFromBLL(foodTag);
-        }
+        }*/
     }
 }

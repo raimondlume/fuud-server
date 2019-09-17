@@ -42,7 +42,7 @@ namespace WebApp.APIControllers.v1_0
             return PriceMapper.MapFromBLL(price);
         }
 
-        // PUT: api/Price/5
+        /*// PUT: api/Price/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPrice(int id, PublicApi.v1.DTO.Price price)
         {
@@ -90,6 +90,6 @@ namespace WebApp.APIControllers.v1_0
             await _bll.SaveChangesAsync();
 
             return PriceMapper.MapFromBLL(price);
-        }
+        }*/
     }
 }

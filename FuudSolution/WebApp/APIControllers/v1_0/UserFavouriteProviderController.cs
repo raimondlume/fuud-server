@@ -53,7 +53,7 @@ namespace WebApp.APIControllers.v1_0
             return UserFavouriteProviderMapper.MapFromBLL(userFavouriteProvider);
         }
 
-        // PUT: api/UserFavouriteProvider/5
+        /*// PUT: api/UserFavouriteProvider/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUserFavouriteProvider(int id,
             PublicApi.v1.DTO.UserFavouriteProvider userFavouriteProvider)
@@ -120,6 +120,6 @@ namespace WebApp.APIControllers.v1_0
             await _bll.SaveChangesAsync();
 
             return UserFavouriteProviderMapper.MapFromBLL(userFavouriteProvider);
-        }
+        }*/
     }
 }

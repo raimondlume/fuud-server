@@ -42,7 +42,7 @@ namespace WebApp.APIControllers.v1_0
             return FoodCategoryMapper.MapFromBLL(foodCategory);
         }
 
-        // PUT: api/FoodCategory/5
+        /*// PUT: api/FoodCategory/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFoodCategory(int id, PublicApi.v1.DTO.FoodCategory foodCategory)
         {
@@ -90,6 +90,6 @@ namespace WebApp.APIControllers.v1_0
             await _bll.SaveChangesAsync();
 
             return FoodCategoryMapper.MapFromBLL(foodCategory);
-        }
+        }*/
     }
 }
