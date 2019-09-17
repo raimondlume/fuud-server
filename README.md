@@ -21,6 +21,6 @@ The server is deployed as a docker container running on a Ubuntu VPS.
 
 **CD/CI** pipeline:
 
-1. push to master triggers a new build at Docker Hub (private)
+1. Push to master triggers a new build at Docker Hub (private)
 2. Docker Hub sends a webhook to a Ubuntu VPS on build completion
-3. bash script pulls the latest image and runs the container
+3. Bash script pulls the latest image and runs the container
