@@ -218,7 +218,7 @@ namespace WebApp
             RecurringJob.AddOrUpdate<IBitStopCrawler>("BitStop breakfast", job => job.UpdateFoodItems(),
                 "0 9 * 1-6,8-12 1-5", TimeZoneInfo.FindSystemTimeZoneById("Europe/Tallinn"));
             RecurringJob.AddOrUpdate<IBitStopCrawler>("BitStop lunch", job => job.UpdateFoodItems(),
-                "30 11 * 1-6,8-12 1-5", TimeZoneInfo.FindSystemTimeZoneById("Europe/Tallinn"));
+                "20 11 * 1-6,8-12 1-5", TimeZoneInfo.FindSystemTimeZoneById("Europe/Tallinn"));
             RecurringJob.AddOrUpdate<IDailyRestaurantsCrawler>("Daily weekly", job => job.UpdateFoodItems(),
                 "50 8 * 1-6,8-12 1", TimeZoneInfo.FindSystemTimeZoneById("Europe/Tallinn"));
 
