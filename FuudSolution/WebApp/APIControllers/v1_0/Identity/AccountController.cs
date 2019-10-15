@@ -100,6 +100,16 @@ namespace WebApp.APIControllers.Identity
                     
                     // create claims based user 
                     var claimsPrincipal = await _signInManager.CreateUserPrincipalAsync(appUser);
+                    
+                    var claims = new List<Claim>
+                    {
+                        new Claim("UserID", appUser.Id.ToString()),
+                        new Claim("FirstName", appUser.FirstName),
+                        new Claim("LastName", appUser.LastName)
+                    };
+                    var appIdentity = new ClaimsIdentity(claims);
+
+                    claimsPrincipal.AddIdentity(appIdentity);
 
                     // get the Json Web Token
                     var jwt = JwtHelper.GenerateJwt(
