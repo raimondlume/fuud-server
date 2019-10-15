@@ -114,8 +114,7 @@ namespace WebApp
                     options.AllowAreas = true;
                     options.Conventions.AuthorizeAreaFolder("me.raimondlu.Identity", "/Account/Manage");
                     options.Conventions.AuthorizeAreaPage("me.raimondlu.Identity", "/Account/Logout");
-                })
-                .AddJsonOptions(options => { options.SerializerSettings.Formatting = Formatting.Indented; });
+                });
 
             services.AddApiVersioning(options => { options.ReportApiVersions = true; });
 
