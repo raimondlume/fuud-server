@@ -40,7 +40,7 @@ namespace WebCrawler
             {"Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede"};
 
         private static readonly List<string> SoupStrings = new List<string>
-            {"supp", "seljanka", "rassolnik", "borš"};
+            {"supp", "seljanka", "rassolnik", "borš", "minestroone"};
 
         public DailyRestaurantsCrawler(IAppBLL bll)
         {
