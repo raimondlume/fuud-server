@@ -7,6 +7,8 @@ namespace Domain
     public class Rating : DomainEntity
     {
         [Required]
+        [Min(-2)]
+        [Max(2)]
         public int RatingValue { get; set; }
         
         [Timestamp]
