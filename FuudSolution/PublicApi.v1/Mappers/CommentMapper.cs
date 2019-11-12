@@ -43,7 +43,7 @@ namespace PublicApi.v1.Mappers
             var res = comment == null ? null : new internalDTO.Comment
             {
                 Id = comment.Id,
-                Timestamp = DateTime.UtcNow(),
+                Timestamp = DateTime.UtcNow,
                 CommentValue = comment.CommentValue,
                 FoodItemId = comment.FoodItemId,
                 AppUserId = comment.AppUserId,
