@@ -10,7 +10,6 @@ namespace Domain
         [Range(-2, 2)]
         public int RatingValue { get; set; }
         
-        [Timestamp]
         public DateTime Timestamp { get; set; }
 
         public int FoodItemId { get; set; }
